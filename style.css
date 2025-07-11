@@ -1,0 +1,286 @@
+/* 기본 폰트 설정 */
+body {
+    font-family: 'Noto Sans', sans-serif;
+  }
+  
+  /* header 시작 */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 56px;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+  }
+  
+  /* 네비게이션 바 (nav) */
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
+  }
+  
+  header .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #D3AF37;
+    text-decoration: none;
+    flex-shrink: 0;
+    text-align: left;
+  }
+  
+  header .nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  header .nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  header .nav-menu li a:hover {
+    color: #FF9900;
+  }
+  
+  header .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+    justify-content: flex-end;
+  }
+  
+  header .nav-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  /* header 끝 */
+  
+  /* section01 시작 */
+  .section01 {
+    background: url('../img/main/background.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 960px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .section01 .main-heading {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 186px;
+    color: black;
+  }
+  
+  .section01 .copyright {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    right: 373px;
+    bottom: 184px;
+  }
+  
+  .section01 .buttons {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .section01 .buttons button {
+    background-color: #17517E;
+    color: white;
+    font-size: 20px;
+    width: 270px;
+    height: 52px;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  .section01 .buttons button:hover {
+    background-color: #0f3c58;
+  }
+  /* section01 끝 */
+  
+  /* section01 시작 */
+  .section01 {
+    background: url('../img/main/background.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 960px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .section01 .main-heading {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 186px;
+    color: black;
+  }
+  
+  .section01 .copyright {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    color: white;
+    position: absolute;
+    right: 373px;
+    bottom: 184px;
+  }
+  
+  .section01 .buttons {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* 버튼들이 섹션02 요소들보다 앞에 오도록 설정 */
+  }
+  
+  .section01 .buttons button {
+    background-color: #17517E;
+    color: white;
+    font-size: 20px;
+    width: 270px;
+    height: 52px;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  .section01 .buttons button:hover {
+    background-color: #0f3c58;
+  }
+  /* section01 끝 */
+  
+  /* section02 시작 */
+  .section02 {
+    width: 100%;
+    height: 2940px;
+    background-color: #f7f7f7;
+  }
+  
+  .section02 h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 60px;
+  }
+  
+  .section02 h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 60px;
+  }
+  
+  .section02 .model-series {
+    width: 1170px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  /* 모델 컨테이너 */
+  .section02 .model-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  
+  /* 모델 슬라이드 컨테이너 */
+  .section02 .model-slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* 모델 슬라이드 */
+  .section02 .model-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 560px;
+  }
+  
+  /* 모델 이미지 크기 */
+  .section02 .model-img {
+    width: 1170px;
+    height: 560px;
+    object-fit: cover;
+  }
+  
+  .section02 .model-description {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    width: 100%;
+    max-width: 1170px;
+    height: 220px;
+  }
+  
+  /* 좌우 버튼 */
+  .section02 button {
+    background-color: #17517e;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* 버튼이 이미지 위에 나오도록 */
+  }
+  
+  .section02 button:hover {
+    background-color: #0f3c58;
+  }
+  
+  .section02 button.prev {
+    left: 0;
+  }
+  
+  .section02 button.next {
+    right: 0;
+  }
+  /* section02 끝 */
+  

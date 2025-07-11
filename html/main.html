@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gullfaxi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Racing+Sans+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/model360view.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "../lib/three.module.js",
+        "GLTFLoader": "../lib/GLTFLoader.js",
+        "OrbitControls": "../lib/OrbitControls.js"
+      }
+    }
+    </script>
+</head>
+
+<body>
+  <!-- header 시작 -->
+  <header>
+    <nav>
+      <a href="main.html" class="logo">Gullfaxi</a>
+      <ul class="nav-menu">
+        <li><a href="../html/sub01.html">모델</a></li>
+        <li><a href="../html/sub02.html">기술</a></li>
+        <li><a href="../html/sub03.html">브랜드</a></li>
+        <li><a href="../html/sub04.html">고객지원</a></li>
+      </ul>
+      <div class="nav-icons">
+        <img src="../img/main/nav_search.png" alt="검색">
+        <img src="../img/main/nav_user.png" alt="사용자">
+      </div>
+    </nav>
+  </header>
+  <!-- header 끝 -->
+
+  <!-- section01 시작 -->
+  <section class="section01">
+    <div class="background-image">
+      <h1 class="main-heading">Gullfaxi Z2</h1>
+      <h2 class="copyright">Ride the Legend</h2>
+      <div class="buttons">
+        <button class="test-drive">가상 시승하기</button>
+        <button id="open360" class="model-view">모델 보기</button>
+      </div>
+    </div>
+  </section>
+  <!-- section01 끝 -->
+
+  <!-- section02 시작 -->
+  <section class="section02">
+    <h2>Model</h2>
+
+    <h3>X Series</h3>
+    <div class="model-series" id="x-series">
+      <div class="model-container">
+        <button class="prev" onclick="changeModel('x', -1)">&#60;</button>
+        <div class="model-slide" id="x-model">
+          <div class="model-content">
+            <div class="model-image">
+              <img src="../img/main/Gullfaxi X1.png" alt="X Series 모델" class="model-img">
+            </div>
+            <div class="model-description">
+              <h4 class="model-title">Gullfaxi X1</h4>
+              <p class="model-desc"> 
+                <br>Gullfaxi X1은 최첨단 전기 파워트레인을 탑재해 0→100km/h를 단 3.2초에 가속합니다. <br>차체는 알루미늄과 탄소 섬유 복합 소재로 제작되어 가벼우면서도 견고합니다. <br>어댑티브 서스펜션이 도로 상태에 따라 실시간으로 댐핑을 조절해 최고의 승차감을 제공합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="next" onclick="changeModel('x', 1)">&#62;</button>
+      </div>
+    </div>
+
+    <h3>Y Series</h3>
+    <div class="model-series" id="y-series">
+      <div class="model-container">
+        <button class="prev" onclick="changeModel('y', -1)">&#60;</button>
+        <div class="model-slide" id="y-model">
+          <div class="model-content">
+            <div class="model-image">
+              <img src="../img/main/Gullfaxi Y1.png" alt="Y Series 모델" class="model-img">
+            </div>
+            <div class="model-description">
+              <h4 class="model-title">Gullfaxi Y1</h4>
+              <p class="model-desc">
+                <br>Gullfaxi Y1은 중형 세단 세그먼트에 맞춘 최적의 밸런스를 제공합니다.  <br>350마력급 전기 모터와 80kWh 배터리가 결합돼 500km 이상의 항속거리를 달성합니다.  <br>인공지능 기반 주행 보조 시스템이 장착돼 장거리 운전에서도 피로를 최소화합니다.</p>
+            </div>
+          </div>
+        </div>
+        <button class="next" onclick="changeModel('y', 1)">&#62;</button>
+      </div>
+    </div>
+
+    <h3>Z Series</h3>
+    <div class="model-series" id="z-series">
+      <div class="model-container">
+        <button class="prev" onclick="changeModel('z', -1)">&#60;</button>
+        <div class="model-slide" id="z-model">
+          <div class="model-content">
+            <div class="model-image">
+              <img src="../img/main/Gullfaxi Z1.png" alt="Z Series 모델" class="model-img">
+            </div>
+            <div class="model-description">
+              <h4 class="model-title">Gullfaxi Z1</h4>
+              <p class="model-desc">
+                <br>Gullfaxi Z1은 플래그십 럭셔리 쿠페 모델로, 극한의 디테일과 품격을 담았습니다.<br>리어 휠 스티어링과 토크 벡터링 디퍼렌셜이 결합되어 스포티하면서도 안정적인 주행을 보장합니다.<br>실내에는 최고급 나파 가죽과 메탈 트림이 조화를 이루며, 맞춤형 몰입형 오디오 시스템을 갖췄습니다.</p>
+            </div>
+          </div>
+        </div>
+        <button class="next" onclick="changeModel('z', 1)">&#62;</button>
+      </div>
+    </div>
+  </section>
+  <!-- section02 끝 -->
+
+  <!-- section03 시작 -->
+  <section class="section03">
+    <h2>Technology</h2>
+    <p>굴팍시의 기술력을 확인해보세요.</p>
+
+    <div class="technology-item">
+      <div class="tech-image">
+        <img src="../img/main/section03_1.png" alt="AI 자율주행 이미지">
+      </div>
+      <div class="tech-content">
+        <h3>AI 자율주행</h3>
+        <p>실시간 센서 퓨전을 통해 주행 환경을 360° 인식하고, <br>안전하고 편안한 운전을 지원합니다.</p>
+        <button class="detail-btn"><a href="../html/sub02.html">자세히 보기</a></button>
+      </div>
+    </div>
+
+    <div class="technology-item">
+      <div class="tech-content">
+        <h3>AWD 시스템</h3>
+        <p>전륜·후륜 구동력을 최적으로 배분해 <br>거친 노면과 급커브에서도 안정적인 주행을 제공합니다.</p>
+        <button class="detail-btn"><a href="../html/sub02.html">자세히 보기</a></button>
+      </div>
+      <div class="tech-image">
+        <img src="../img/main/section03_2.png" alt="AWD 시스템 이미지">
+      </div>
+    </div>
+
+    <div class="technology-item">
+      <div class="tech-image">
+        <img src="../img/main/section03_3.png" alt="V2G 기술 이미지">
+      </div>
+      <div class="tech-content">
+        <h3>V2G 기술</h3>
+        <p>차량의 배터리를 양방향 전력망과 연계하여, <br>필요한 시점에 전기를 공급하거나 충전합니다.</p>
+        <button class="detail-btn"><a href="../html/sub02.html">자세히 보기</a></button>
+      </div>
+    </div>
+
+    <div class="technology-item">
+      <div class="tech-content">
+        <h3>AR HUD & 3D 인터페이스</h3>
+        <p>증강현실 헤드업 디스플레이로 운전 정보를 직관적으로 띄우고, <br>3D 그래픽으로 조작성을 극대화합니다.</p>
+        <button class="detail-btn"><a href="../html/sub02.html">자세히 보기</a></button>
+      </div>
+      <div class="tech-image">
+        <img src="../img/main/section03_4.png" alt="AR HUD & 3D 인터페이스 이미지">
+      </div>
+    </div>
+
+    <div class="technology-item">
+      <div class="tech-image">
+        <img src="../img/main/section03_5.png" alt="스마트 연결 & 원격 제어 이미지">
+      </div>
+      <div class="tech-content">
+        <h3>스마트 연결 & 원격 제어</h3>
+        <p>모바일 앱으로 차량 상태 확인·원격 시동·도어 잠금 등을 <br>언제 어디서나 제어할 수 있습니다.</p>
+        <button class="detail-btn"><a href="../html/sub02.html">자세히 보기</a></button>
+      </div>
+    </div>
+  </section>
+  <!-- section03 끝 -->
+
+  <!-- section04 시작 -->
+  <section class="section04">
+    <h2>Brand</h2>
+    <p>신화 속의 명마와의 전설적인 여정</p>
+
+    <div class="brand-list">
+      <div class="brand-item">
+        <div class="brand-image">
+          <img src="../img/main/section04_1.png" alt="속도">
+          <div class="overlay">
+            <p class="brand-text">속도</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="brand-item">
+        <div class="brand-image">
+          <img src="../img/main/section04_2.png" alt="강인함">
+          <div class="overlay">
+            <p class="brand-text">강인함</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="brand-item">
+        <div class="brand-image">
+          <img src="../img/main/section04_3.png" alt="미래지향성">
+          <div class="overlay">
+            <p class="brand-text">미래지향성</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="brand-item">
+        <div class="brand-image">
+          <img src="../img/main/section04_4.png" alt="지속가능성">
+          <div class="overlay">
+            <p class="brand-text">지속가능성</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="video-container">
+      <video width="1170" height="720" muted autoplay playsinline loop="1">
+        <source src="../img/main/section04_video.mp4" type="video/mp4">
+        브라우저가 비디오 태그를 지원하지 않습니다.
+      </video>
+    </div>
+
+    <p class="brand-info">
+      굴팍시는 단순한 이동수단이 아닌, 전설을 향한 여정입니다.
+    </p>
+    <button class="more-info-btn"><a href="../html/sub03.html">브랜드 더 알아보기</a></button>
+    <button class="more-info-btn"><a href="../html/sub01.html">모델 라인업 보기</a></button>
+  </section>
+  <!-- section04 끝 -->
+
+  <!-- 360view 시작 -->
+  <div id="modal-container"></div>
+  <!-- 360view 끝 -->
+   
+  <!-- footer 시작 -->
+  <footer>
+    <div class="footer-content">
+
+      <div class="footer-left">
+        <div class="logo">
+          <img src="../img/main/logo.png" alt="Gullfaxi 로고">
+          <span>Gullfaxi</span>
+        </div>
+      </div>
+
+      <div class="footer-mid">
+        <p class="footer-links">
+          <a href="#">개인정보 처리 방침</a> |
+          <a href="#">이용약관</a> |
+          <a href="#">법적 고지</a>
+        </p>
+      </div>
+
+
+      <div class="footer-right">
+        <div class="sns">
+          <a href="https://www.facebook.com/" target="_blank"><img src="../img/main/footer_facebook.png" alt="facebook"></a>
+          <a href="https://www.youtube.com/" target="_blank"><img src="../img/main/footer_youtube.png" alt="youtube"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="../img/main/footer_instagram.png" alt="instagram"></a>
+          <a href="https://x.com/?lang=ko" target="_blank"><img src="../img/main/footer_X.png" alt="X"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="business-info">
+        <strong>상호: Gullfaxi 주식회사</strong> |
+        사업자 등록번호: 123-45-67890 |
+        대표자: 김준열<br>
+        주소: 대구광역시 달성군 화원읍 비슬로 2679 |
+        전화번호: 010-5915-5702 |
+        이메일: wnsduf5602@naver.com
+        <br><br>
+        본 정보는 Gullfaxi의 공식 서비스와 관련된 모든 문의에 사용될 수 있으며, 모든 법적 요구사항을 충족합니다. 이 외에도 추가적인 정보가 필요하시면 고객센터로 문의 주시기 바랍니다.
+      </p>
+    </div>
+
+  </footer>
+  <!-- footer 끝 -->
+
+  <script src="../script/main.js"></script>
+</body>
+
+</html>
